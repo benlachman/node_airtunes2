@@ -64,7 +64,15 @@ Usage
 
 ### Build
 
-`yarn install`
+`npm install` uses the addon under `prebuilds/` when one matches the platform and Node ABI, and compiles it otherwise.
+
+### Release
+
+The fork is installed from a tarball attached to the GitHub release, because installing it as a git dependency makes npm build it twice. To cut one:
+
+1. Bump `version` in `package.json` to `2.4.9-babelpod.N` and merge.
+2. `npm run pack-release` (needs Docker) writes `airtunes2-<version>.tgz` with the addon prebuilt for linux-arm64, Node 20, Debian trixie.
+3. `gh release create v<version> airtunes2-<version>.tgz --repo benlachman/node_airtunes2`
 
 ### Playback
 
