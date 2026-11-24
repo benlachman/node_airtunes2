@@ -19,6 +19,7 @@
     "url": "https://github.com/ciderapp/node_airtunes2.git"
   },
   "scripts": {
+    "test": "node --test test/*.test.js",
     "build-binaries-electron": "run-script-os",
     "build-binaries-electron-ci": "prebuild --platform win32 --platform linux --platform darwin --include-regex \"^.*\\.(node|dylib|lib|exp|dll|so(\\.[0-9])?)$\" -r electron -t 25.0.0-alpha.1 -t 24.0.0-alpha.1 -t 23.0.0-alpha.1 -t 22.0.0-alpha.1 -t 21.0.- -t 20.1.- -t 19.0.1 -t 16.0.7",
     "build-binaries-electron:win32": "prebuild --platform win32 --include-regex \"^.*\\.(node|dylib|lib|exp|dll|so(\\.[0-9])?)$\" -r electron -t 25.0.0-alpha.1 -t 24.0.0-alpha.1 -t 23.0.0-alpha.1 -t 22.0.0-alpha.1 -t 21.0.0 -t 20.1.0 -t 19.0.3 -t 18.3.3 -t 16.0.7",
@@ -61,7 +62,6 @@
     "axlsign": "git+https://github.com/ciderapp/curve25519-js.git",
     "big-integer": "^1.6.25",
     "castv2-client": "^1.2.0",
-    "chacha-js": "https://github.com/ciderapp/chacha20poly1305",
     "crypto-js": "^4.1.1",
     "curve25519-js": "^0.0.4",
     "electron-fetch": "^1.7.4",
